@@ -43,5 +43,5 @@ if [[ $num =~ $pat3 ]]
 then
     echo "Mobile no:- "$num
 else
-    echo "Invalid Mobile Number"
+    echo "Invalid Mobile number"
 fi
