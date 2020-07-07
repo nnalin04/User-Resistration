@@ -10,7 +10,8 @@ echo "Enter the Email ID"
 read email
 echo "Enter Your Mobile Number"
 read num
-
+echo "Enter Password"
+read pas
 
 pat1="^([A-Z]{1}[a-z]{2,} {0,1})+$"
 
@@ -18,6 +19,7 @@ pat2="^[0-9a-zA-Z]+([._+-][0-9a-zA-Z]+)*@[0-9a-zA-Z]+.[0-9a-zA-Z]{2,4}([.][a-zA-
 
 pat3="^([1-9]{1}([-][1-9]{1}[0-9]{1,2}||[0-9]{1,3})) {1}[1-9]{1}[0-9]{9}$"
 
+pat4="^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*\+])(?=.{8,})"
 
 
 if [[ $firstN =~ $pat1 ]]
@@ -44,4 +46,11 @@ then
     echo "Mobile no:- "$num
 else
     echo "Invalid Mobile number"
+fi
+
+if [[ $pas =~ $pat4 ]]
+then
+    echo "Correct password"
+else
+    echo "Invalid Password"
 fi
